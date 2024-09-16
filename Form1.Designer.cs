@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_xuat = new Button();
-            label1 = new Label();
-            txt_Dai = new TextBox();
-            label2 = new Label();
-            txt_Rong = new TextBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -40,61 +35,18 @@
             label7 = new Label();
             txt_msv = new TextBox();
             txt_hoten = new TextBox();
-            txt_ngaysinh = new TextBox();
             txt_sdt = new TextBox();
             txt_gioitinh = new TextBox();
             button1 = new Button();
+            dt_Ngaysinh = new DateTimePicker();
+            label8 = new Label();
+            label9 = new Label();
+            txt_stk = new TextBox();
+            txt_nh = new TextBox();
+            dataGridView1 = new DataGridView();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // btn_xuat
-            // 
-            btn_xuat.Font = new Font("Times New Roman", 12F);
-            btn_xuat.Location = new Point(212, 286);
-            btn_xuat.Name = "btn_xuat";
-            btn_xuat.Size = new Size(75, 45);
-            btn_xuat.TabIndex = 0;
-            btn_xuat.Text = "Xuất";
-            btn_xuat.UseVisualStyleBackColor = true;
-            btn_xuat.Click += btn_xuat_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F);
-            label1.Location = new Point(22, 271);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 19);
-            label1.TabIndex = 1;
-            label1.Text = "Chiều Dài";
-            // 
-            // txt_Dai
-            // 
-            txt_Dai.Font = new Font("Times New Roman", 12F);
-            txt_Dai.Location = new Point(106, 264);
-            txt_Dai.Name = "txt_Dai";
-            txt_Dai.Size = new Size(100, 26);
-            txt_Dai.TabIndex = 2;
-            txt_Dai.TextChanged += textBox1_TextChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F);
-            label2.Location = new Point(22, 308);
-            label2.Name = "label2";
-            label2.Size = new Size(80, 19);
-            label2.TabIndex = 1;
-            label2.Text = "Chiều Rộng";
-            label2.Click += label2_Click;
-            // 
-            // txt_Rong
-            // 
-            txt_Rong.Font = new Font("Times New Roman", 12F);
-            txt_Rong.Location = new Point(106, 305);
-            txt_Rong.Name = "txt_Rong";
-            txt_Rong.Size = new Size(100, 26);
-            txt_Rong.TabIndex = 2;
-            txt_Rong.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -133,7 +85,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F);
-            label6.Location = new Point(21, 119);
+            label6.Location = new Point(20, 119);
             label6.Name = "label6";
             label6.Size = new Size(50, 19);
             label6.TabIndex = 1;
@@ -144,7 +96,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 12F);
-            label7.Location = new Point(21, 151);
+            label7.Location = new Point(352, 14);
             label7.Name = "label7";
             label7.Size = new Size(64, 19);
             label7.TabIndex = 1;
@@ -156,7 +108,7 @@
             txt_msv.Font = new Font("Times New Roman", 12F);
             txt_msv.Location = new Point(106, 12);
             txt_msv.Name = "txt_msv";
-            txt_msv.Size = new Size(148, 26);
+            txt_msv.Size = new Size(216, 26);
             txt_msv.TabIndex = 2;
             txt_msv.TextChanged += textBox1_TextChanged;
             // 
@@ -165,40 +117,31 @@
             txt_hoten.Font = new Font("Times New Roman", 12F);
             txt_hoten.Location = new Point(105, 44);
             txt_hoten.Name = "txt_hoten";
-            txt_hoten.Size = new Size(149, 26);
+            txt_hoten.Size = new Size(217, 26);
             txt_hoten.TabIndex = 2;
             txt_hoten.TextChanged += textBox1_TextChanged;
-            // 
-            // txt_ngaysinh
-            // 
-            txt_ngaysinh.Font = new Font("Times New Roman", 12F);
-            txt_ngaysinh.Location = new Point(105, 79);
-            txt_ngaysinh.Name = "txt_ngaysinh";
-            txt_ngaysinh.Size = new Size(149, 26);
-            txt_ngaysinh.TabIndex = 2;
-            txt_ngaysinh.TextChanged += textBox1_TextChanged;
             // 
             // txt_sdt
             // 
             txt_sdt.Font = new Font("Times New Roman", 12F);
-            txt_sdt.Location = new Point(106, 115);
+            txt_sdt.Location = new Point(105, 115);
             txt_sdt.Name = "txt_sdt";
-            txt_sdt.Size = new Size(148, 26);
+            txt_sdt.Size = new Size(216, 26);
             txt_sdt.TabIndex = 2;
             txt_sdt.TextChanged += textBox1_TextChanged;
             // 
             // txt_gioitinh
             // 
             txt_gioitinh.Font = new Font("Times New Roman", 12F);
-            txt_gioitinh.Location = new Point(106, 151);
+            txt_gioitinh.Location = new Point(437, 14);
             txt_gioitinh.Name = "txt_gioitinh";
-            txt_gioitinh.Size = new Size(148, 26);
+            txt_gioitinh.Size = new Size(216, 26);
             txt_gioitinh.TabIndex = 2;
             txt_gioitinh.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(290, 70);
+            button1.Location = new Point(370, 114);
             button1.Name = "button1";
             button1.Size = new Size(103, 45);
             button1.TabIndex = 3;
@@ -206,41 +149,104 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // dt_Ngaysinh
+            // 
+            dt_Ngaysinh.Location = new Point(106, 86);
+            dt_Ngaysinh.Name = "dt_Ngaysinh";
+            dt_Ngaysinh.Size = new Size(216, 23);
+            dt_Ngaysinh.TabIndex = 4;
+            dt_Ngaysinh.ValueChanged += dt_Ngaysinh_ValueChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 12F);
+            label8.Location = new Point(352, 50);
+            label8.Name = "label8";
+            label8.Size = new Size(51, 19);
+            label8.TabIndex = 1;
+            label8.Text = "Số TK";
+            label8.Click += label2_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 12F);
+            label9.Location = new Point(352, 82);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 19);
+            label9.TabIndex = 1;
+            label9.Text = "Ngân Hàng";
+            label9.Click += label2_Click;
+            // 
+            // txt_stk
+            // 
+            txt_stk.Font = new Font("Times New Roman", 12F);
+            txt_stk.Location = new Point(437, 46);
+            txt_stk.Name = "txt_stk";
+            txt_stk.Size = new Size(216, 26);
+            txt_stk.TabIndex = 2;
+            txt_stk.TextChanged += textBox1_TextChanged;
+            // 
+            // txt_nh
+            // 
+            txt_nh.Font = new Font("Times New Roman", 12F);
+            txt_nh.Location = new Point(437, 82);
+            txt_nh.Name = "txt_nh";
+            txt_nh.Size = new Size(216, 26);
+            txt_nh.TabIndex = 2;
+            txt_nh.TextChanged += textBox1_TextChanged;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 193);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(693, 165);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(515, 121);
+            button2.Name = "button2";
+            button2.Size = new Size(83, 38);
+            button2.TabIndex = 6;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(717, 358);
+            Controls.Add(button2);
+            Controls.Add(dataGridView1);
+            Controls.Add(dt_Ngaysinh);
             Controls.Add(button1);
+            Controls.Add(txt_nh);
             Controls.Add(txt_gioitinh);
+            Controls.Add(txt_stk);
             Controls.Add(txt_sdt);
-            Controls.Add(txt_ngaysinh);
             Controls.Add(txt_hoten);
             Controls.Add(txt_msv);
-            Controls.Add(txt_Rong);
-            Controls.Add(txt_Dai);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(btn_xuat);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btn_xuat;
-        private Label label1;
-        private TextBox txt_Dai;
-        private Label label2;
-        private TextBox txt_Rong;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -248,9 +254,15 @@
         private Label label7;
         private TextBox txt_msv;
         private TextBox txt_hoten;
-        private TextBox txt_ngaysinh;
         private TextBox txt_sdt;
         private TextBox txt_gioitinh;
         private Button button1;
+        private DateTimePicker dt_Ngaysinh;
+        private Label label8;
+        private Label label9;
+        private TextBox txt_stk;
+        private TextBox txt_nh;
+        private DataGridView dataGridView1;
+        private Button button2;
     }
 }

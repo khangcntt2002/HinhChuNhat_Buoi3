@@ -21,12 +21,9 @@ namespace HinhChuNhat_Buoi3
 
         private void btn_xuat_Click(object sender, EventArgs e)
         {
-            HinhChuNhat hinhchunhat = new HinhChuNhat();
 
-            hinhchunhat.setChieudai(int.Parse(txt_Dai.Text));
-            hinhchunhat.setChieurong(int.Parse(txt_Rong.Text));
 
-            MessageBox.Show("Chiều Dài:" + hinhchunhat.getChieudai() + "\n Chiều Rộng:" + hinhchunhat.getChieurong());
+
 
         }
 
@@ -34,16 +31,34 @@ namespace HinhChuNhat_Buoi3
         {
 
         }
+        List<SinhVien_Buoi3> li_sv = new List<SinhVien_Buoi3>();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SinhVien_Buoi3 Sinhvienbuoi3 = new SinhVien_Buoi3();
-            Sinhvienbuoi3.setMasv(int.Parse(txt_msv.Text));
-            Sinhvienbuoi3.sethovaten(txt_hoten.Text);
-            Sinhvienbuoi3.setNgaysinh(txt_ngaysinh.Text);
-            Sinhvienbuoi3.setSoDienThoai(int.Parse(txt_sdt.Text));
-            Sinhvienbuoi3.setGioitinh(txt_gioitinh.Text);
-            MessageBox.Show("Mã SV:" + Sinhvienbuoi3.getMasv() + "\n Họ Và Tên:" + Sinhvienbuoi3.getHovaten() + "\n Ngày Sinh:" + Sinhvienbuoi3.getNgaysinh() + "\n SỐ ĐT: " + Sinhvienbuoi3.getSoDienThoai() + "\n Giới Tính:" + Sinhvienbuoi3.getGioitinh());
+            SinhVien_Buoi3 sv = new SinhVien_Buoi3(txt_msv.Text, txt_hoten.Text, dt_Ngaysinh.Value, txt_sdt.Text, txt_gioitinh.Text, txt_stk.Text, txt_nh.Text);
+
+            li_sv.Remove(sv);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = li_sv;
+
+            
+        }
+
+        private void dt_Ngaysinh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            li_sv.Remove(li_sv[0]);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = li_sv;
         }
     }
 }
